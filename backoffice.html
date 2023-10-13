@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jhonny's Game Shop</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-danger mb-4">
+      <div class="container-fluid">
+        <a href="home.html"
+          ><img
+            class="navbar-brand"
+            src="johnny-bravo-2-logo-black-and-white.png"
+            width="60"
+            height="50"
+        /></a>
+
+        <button
+          class="navbar-toggler order-1 order-md-2 border-white bg-danger"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-theme="dark"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon bg-danger"></span>
+        </button>
+        <!--INIZIO CONTENUTO NAVBAR-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <h1 class="text-white m-0">Johnny's Game Shop</h1>
+            </li>
+          </ul>
+        </div>
+        <ul
+          class="navbar-nav ms-auto mb-lg-0 d-flex flex-row align-items-center"
+        >
+          <!--INIZIO SEARCH NAVBAR-->
+          <div class="collapse" id="searchForm">
+            <div class="container">
+              <form class="form-inline d-flex">
+                <input
+                  class="form-control mr-sm-2"
+                  type="search"
+                  placeholder="Cerca"
+                  aria-label="Search"
+                />
+                <button class="btn btn-success my-2 my-sm-0" type="submit">
+                  Cerca
+                </button>
+              </form>
+            </div>
+          </div>
+          <li>
+            <span class="nav-item text-white px-2">
+              <button
+                class="btn btn-outline-success border-0 my-2 my-sm-0"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#searchForm"
+                aria-expanded="false"
+              >
+                <i class="bi bi-search text-white"></i>
+              </button>
+            </span>
+          </li>
+          <!--FINE SEARCH NAVBAR-->
+          <!--INIZIO NOTIFICHE NAVBAR-->
+          <li class="nav-item dropstart col p-2">
+            <button
+              type="button"
+              class="btn btn-outline-success dropdown border-0 rounded-circle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="bi bi-bell-fill text-white"></i>
+            </button>
+            <ul
+              class="dropdown-menu position-absolute top-100 end-0 bg-danger"
+              style="width: 280px"
+            >
+              <li>
+                <a class="dropdown-item text-white" href="#">No Notification</a>
+              </li>
+
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item text-white" href="#"
+                  >Something else here</a
+                >
+              </li>
+            </ul>
+          </li>
+          <!--FINE NOTIFICHE NAVBAR-->
+          <!--CARRELLO-->
+          <li class="nav-item dropstart p-2 col">
+            <button
+              type="button"
+              class="btn border-0 dropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="bi bi-cart3 text-white"></i>
+            </button>
+
+            <ul
+              class="dropdown-menu position-absolute top-100 end-0 bg-danger"
+              style="width: 600px"
+            >
+              <div class="container" id="cart">
+                <div class="d-flex align-items-center text-center text-white">
+                  <li class="col">Articles</li>
+                  <li class="col">Price</li>
+                  <button type="button" class="btn border-0">
+                    <i class="bi bi-cart-x-fill text-danger"></i>
+                  </button>
+                </div>
+                <li class="mb-2"><hr class="dropdown-divider" /></li>
+              </div>
+              <li class="col text-center text-white my-2 fs-4" id="totLi"></li>
+            </ul>
+          </li>
+          <!--FINE CARRELLO-->
+          <!--INIZIO SETTINGS NAVBAR-->
+          <li class="nav-item dropstart p-2 col">
+            <a
+              type="button"
+              class="btn border-0"
+              aria-expanded="false"
+              href="backoffice.html"
+            >
+              <i class="bi bi-gear-fill text-white"></i>
+            </a>
+          </li>
+          <!--FINE SETTINGS NAVBAR-->
+          <li class="nav-item dropstart p-2 col">
+            <button
+              type="button"
+              class="btn border-0 dropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="johnny-bravo-2-logo-black-and-white.png"
+                width="35px"
+                height="35px"
+              />
+            </button>
+
+            <ul
+              class="dropdown-menu position-absolute top-100 end-0 bg-danger"
+              style="width: 280px"
+            >
+              <li class="mt-2">
+                <div class="row justify-content-center align-items-center">
+                  <div class="col col-2">
+                    <img
+                      src="johnny-bravo-2-logo-black-and-white.png"
+                      width="45px"
+                      height="45px"
+                      class="rounded-circle"
+                    />
+                  </div>
+                  <div class="col col-9 align-items-start">
+                    <p class="m-0 ps-2 text-white">Giovanni Longo</p>
+                    <p class="m-0 ps-2 text-white">g_l@epicode.com</p>
+                  </div>
+                </div>
+              </li>
+              <li class="mb-2"><hr class="dropdown-divider" /></li>
+              <li class="mb-2">
+                <div class="row justify-content-center">
+                  <div class="col-2">
+                    <i class="bi bi-person text-white"></i>
+                  </div>
+                  <div class="col-8 align-items-start">
+                    <a class="text-decoration-none text-white" href="#"
+                      >Profile</a
+                    >
+                  </div>
+                </div>
+              </li>
+              <li class="mb-2">
+                <div class="row justify-content-center">
+                  <div class="col-2">
+                    <i class="bi bi-star text-white"></i>
+                  </div>
+                  <div class="col-8 align-items-start">
+                    <a class="text-decoration-none text-white" href="#"
+                      >Subscription</a
+                    >
+                  </div>
+                </div>
+              </li>
+              <li class="mb-2">
+                <div class="row justify-content-center">
+                  <div class="col-2">
+                    <i class="bi bi-gear text-white"></i>
+                  </div>
+                  <div class="col-8 align-items-start">
+                    <a class="text-decoration-none text-white" href="#"
+                      >Settings</a
+                    >
+                  </div>
+                </div>
+              </li>
+              <li class="mb-2"><hr class="dropdown-divider" /></li>
+              <li class="mb-2 mt-3">
+                <div class="row justify-content-center">
+                  <a
+                    class="text-decoration-none text-white text-center"
+                    href="#"
+                    >Sign Out</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <form id="form">
+        <div class="mb-3">
+          <label for="titolo" class="form-label">Titolo</label>
+          <input type="text" class="form-control" id="titolo" required />
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Descrizione</label>
+          <input type="text" class="form-control" id="description" required />
+        </div>
+        <div class="mb-3">
+          <label for="img" class="form-label">Immagine</label>
+          <input type="text" class="form-control" id="img" required />
+        </div>
+        <div class="mb-3">
+          <label for="genere" class="form-label">Genere</label>
+          <input type="text" class="form-control" id="genere" required />
+        </div>
+        <div class="mb-3">
+          <label for="brand" class="form-label">Brand</label>
+          <input type="text" class="form-control" id="brand" required />
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">Prezzo</label>
+          <input type="number" class="form-control" id="price" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="Se">Submit</button>
+      </form>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="backoffice.js"></script>
+  </body>
+</html>
