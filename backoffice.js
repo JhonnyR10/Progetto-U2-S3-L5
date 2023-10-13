@@ -163,7 +163,9 @@ formReference.addEventListener("submit", function (e) {
     .then((res) => {
       console.log("OGGETTO RESPONSE DELLA NOSTRA CHIAMATA POST", res);
       if (res.ok) {
-        alert("EVENTO SALVATO CORRETTAMENTE!");
+        if (confirm("GIOCO CARICATO CORRETTAMENTE")) {
+          location.href = "home.html";
+        }
       } else {
         alert("ERRORE NEL SALVATAGGIO DELL'EVENTO");
         throw new Error("Errore nella POST");
